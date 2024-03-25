@@ -60,7 +60,7 @@ void update_element(int matrix[][10], int size) {
     std::cout << "Enter the row index (0 to " << size - 1 << "): ";
     std::cin >> row;
     while (row < 0 || row >= size) {
-        std::cout << "Invalid row index! Please enter again: ";
+        std::cout << "Invalid row index";
         std::cin >> row;
     }
 
@@ -68,7 +68,7 @@ void update_element(int matrix[][10], int size) {
     std::cout << "Enter the column index (0 to " << size - 1 << "): ";
     std::cin >> col;
     while (col < 0 || col >= size) {
-        std::cout << "Invalid column index! Please enter again: ";
+        std::cout << "Invalid column index";
         std::cin >> col;
     }
 
@@ -105,7 +105,7 @@ int main() {
     int matrix1[10][10], matrix2[10][10], result[10][10];
     int size;
     
-    std::ifstream file("test.txt");
+    std::ifstream file("matrix_input.txt");
     if (!file.is_open()) {
         std::cerr << "Error opening file." << std::endl;
         return 1;
